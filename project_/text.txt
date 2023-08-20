@@ -1,0 +1,57 @@
+
+1. docker-compose up -d
+2. open http://localhost:5050 for pgAdmin
+3. open http://localhost:1080 email box
+3. open http://localhost:9411  for zipkin
+
+
+docker run -p 1080:1080 -p 1025:1025 maildev/maildev
+url http://localhost:1080/
+for rabbitmq-->
+docker run --rm -it -p 5672:5672 rabbitmq
+
+
+
+config server
+когда меняешь проперти в репизотории перезапусти config-server
+и вызови  с POST method
+http://localhost:8082/actuator/refresh
+
+for bus
+http://localhost:8082/actuator/busrefresh
+
+management.endpoints.web.exposure.include=*
+
+
+Circuit Breaker
+https://spring.io/projects/spring-cloud-circuitbreaker
+https://resilience4j.readme.io/
+https://resilience4j.readme.io/docs/circuitbreaker
+https://resilience4j.readme.io/docs/retry
+
+
+
+
+Java Cryptography Architecture
+Standard Algorithm Name Documentation for JDK 8
+https://docs.oracle.com/javase/8/docs/technotes/guides/security/StandardNames.html
+
+
+
+jib
+https://github.com/GoogleContainerTools/jib
+
+
+https://maven.apache.org/plugins/maven-compiler-plugin/
+https://maven.apache.org/index.html
+
+
+модуль Employee не получится скомпелировать в maven lifecycle из- за модуля clients
+нужно сперва сделать - clean --- install в root,  чтоб модуль был в локальном репозитории
+
+
+links
+https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/
+https://github.com/GoogleContainerTools/jib
+
+
